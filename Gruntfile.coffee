@@ -9,8 +9,10 @@ module.exports = (grunt) ->
 
         coffee:
             compile:
+                options:
+                    join: true
                 files:
-                    'bin/jquery.simpsons.js': 'coffee/jquery.simpsons.coffee'
+                    'bin/jquery.simpsons.js': ['coffee/templates.coffee', 'coffee/simpsons.coffee']
 
     grunt.loadNpmTasks 'grunt-contrib-cssmin'
     grunt.loadNpmTasks 'grunt-contrib-coffee'
