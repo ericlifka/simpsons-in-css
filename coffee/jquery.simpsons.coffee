@@ -1,9 +1,8 @@
-
 $ = window.jQuery
 if not $ then return
 
 templates =
-    Homer: """
+    homer: """
         <div class="head">
             <!-- Hair and top of head -->
             <div class="hair1"></div>
@@ -52,7 +51,7 @@ templates =
             </div>
         </div>
         """
-    Bart: """
+    bart: """
         <div class="head">
             <div class="no-border body hair hair1"></div>
             <div class="no-border body hair hair2"></div>
@@ -101,10 +100,10 @@ templates =
             <div class="no-border mouth-smile"></div>
         </div>
         """
-characters =
-    Homer: (div) ->
-    Bart: (div) ->
 
-$.fn.simpsons = (character = "Bart") ->
-    characters[character]?(@)
+$.fn.simpsons = (character = "bart") ->
+    if templates[character]
+        @.attr 'id', character
+        @.addClass 'simpsons'
+        @.append $(templates[character])
     @
