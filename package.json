@@ -1,0 +1,10 @@
+{
+    "name": "simpsons-in-css",
+    "version": "0.0.1",
+    "repository": "https://github.com/ericlifka/simpsons-in-css.git",
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-coffee": "^0.10.1",
+        "grunt-contrib-cssmin": "^0.10.0"
+    }
+}
